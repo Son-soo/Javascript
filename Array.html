@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr1 = new Array();
+        arr1[0]=1;
+        arr1[1]=2;
+        arr1[2]="Hello";
+
+        // console.log(arr1[0]);
+        // console.log(arr1[1]);
+        // console.log(arr1[2]);
+
+        // for(let i = 0; i<arr1.length; i++){
+        //     console.log(arr1[i]);
+        // }
+
+        // arr1.forEach((element,index,arr1)=>
+        //  console.log(element),
+        // );
+
+        // for(let value in arr1){
+        //     console.log(arr1[value]);
+        // }
+
+        // let arr2=new Array(4,5,"world");
+        // for(let value in arr2){
+        //     console.log(arr2[value]);
+        // }
+
+        // let arr3=[];   //let arr3 = [7,8,9]
+        // arr3[0]=7;
+        // arr3[1]=8;
+        // arr3[2]=9;
+        // for(let value in arr3){
+        //     console.log(arr3[value]);
+        // }
+
+        // let arr = [1234,'test',true];
+        // arr.length=5;           // 0 ~ 4
+        // for(let value in arr){
+        //     console.log(arr[value]);
+        // }
+
+        // console.log(arr[4]);
+        // arr[5] = 'apple';
+        // console.log(arr[5])
+
+        // let arr_1= ["사당","교대","방배","강남"];
+        // let arr_2= ["신사", "압구정", "옥수"];
+
+        // let result = arr_1.join("-");
+        // console.log(result);
+
+        // result = arr_1.concat(arr_2); //새로운 배열에 할당한다.
+        // console.log(result);
+
+        // result = arr_1.slice(1,3);
+        // console.log(result);
+
+        // result = arr_1.sort();
+        // console.log(result);
+
+        // result= arr_2.reverse();
+        // console.log(result);
+
+        let greenArr =["교대","방배","강남"];
+        let yellowArr =["미금","정자","수서"];
+
+        greenArr.splice(2,1, '서초','역삼');  
+        //배열의 특정 위치의 데이터를 삭제하고 동시에 삽입(데이터가 삭제된 위치에서 부터)
+        console.log(greenArr);
+
+        let date1 = yellowArr.pop();
+        console.log(data1);
+        console.log(yellowArr);
+
+        let data2 = yellowArr.shift();
+        console.log(data2);
+        console.log(yellowArr); //배열이 맨앞의 값을 꺼내오면서 삭제
+  
+        yellowArr.push(date2);  //배열의 마지막에 값을 삽입
+        console.log(yellowArr);
+
+        yellowArr.unshift(data1); //배열의 맨앞 값을 삽입
+        console.log(yellowArr);
+
+        //인덱스 번호 알아내기
+        console.log(yellowArr.indexof("수서"));
+        
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

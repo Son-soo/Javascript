@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // alert("메시지전달\n주의 하세요")
+        // let num1 = parseInt("숫자입력","");   //type이 문자(숫자로 형변환)
+        // let num2 = parseInt("숫자입력","0");  //type이 문자(숫자로 형변환)
+
+        // document.write(num1 + num2);
+        // confirm("선택하세요");
+
+        // setInterval(실행문(익명함수),시간간격)
+
+        // var count = 0;
+        // setInterval(function(){
+        //     count++;
+        //     console.log(count);
+        // },1000);
+
+        // setTimeout()  한번만 실행
+        // let count=0;
+        // let auto2 = setTimeout(function(){
+        //     count++
+        //     console.log(count);
+        // },3000)
+
+        // setInterval(function(){
+        //     let timer = new Date();
+        //     let h = timer.getHours();
+        //     let m = timer.getMinutes();
+        //     let s = timer.getSeconds();
+        //     document.getElementById("clock").innerHTML=h+":"+m+":"+s;
+        // },1000);
+
+        // window객체명은 생략가능
+
+        // location
+        // 1. 페이지 이동 : location.href = 주소값
+        // 2. 페이지 새로고침 : location.reload();
+
+        // location.href= "http://www.kakao.co.kr"
+        // location.reload();
+
+        // history
+        // 브라우저의 페이지 이동 정보를 저장 관리
+
+        // history.back(); //이전페이지
+        // history.forward(); // 다음페이지
+
+        // window
+        // location
+        // history
+        // screen
+        // navigator
+        // document
+
+
+    </script>
+</head>
+<body>
+    <!-- <h1>alert 기능 테스트</h1> -->
+    <!-- <button type="button" onclick="clearInterval(auto)">clearInterval()</button> -->
+    <!-- <button type="button" onclick="clearTimeout(auto2)">clearInterval()</button> -->
+    <p>디지털 시계</p>
+    <h1 id="clock"></h1>
+
+    <button type="button" onclick="history.back();">Historyback()</button>
+    <button type="button" onclick="history.forward();">Historyforward()</button>
+</body>
+</html>

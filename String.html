@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let str = new String ("Hello");
+        // console.log(str);
+
+        // let str2 = "world";
+        // console.log(str2);
+
+        // let t = "Hello Thank you good luck to you";
+        // console.log(t.match("luck"));
+        // console.luck(t.match("lucks")); // null반환
+
+        // console.log(t.search("you"));
+        // console.log(t.search("yous")); //-1반환
+
+        let userName = prompt ("당신의 영문 이름은?", "");
+
+        let upperName = userName.toUpperCase();
+        document.write(upperName, "<br>");
+
+        let userNum = prompt("당신의 연락처는?" ,"");
+
+        //substring(시작 인덱스,끝 인덱스)
+        //substring(시작)
+        let result = userName.substring(0, userNum.length - 4)+"****";
+        document.write(result, "<br>");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
