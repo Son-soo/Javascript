@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //객체
+        //객체란 이름(key, name)과 값(value)로 구성된 프로퍼티의 집합입니다.
+        //원시타입(primitive type)을 제외한 모든 것이 객체(Object)로 정의됩니다.
+
+        //객체의 정의와 프로퍼티 참조방식
+        //1. object.property (Dot Natation)
+        //2. object.['property'] (Bracket Notation)
+        // let obj = [] 배열 형식
+
+        // let obj = {              //객체의 정의
+        //     cat:"mcow",
+        //     dog:"woof"
+        // }
+
+        // console.log(obj.cat);       //객체의 사용
+        // console.log(obj.dog);
+
+        // console.log(obj["cat"]);
+        // console.log(obj["dog"]);
+
+        //가장 중요한 차이점은 Bracket안에 변수를 담을 수 있다는 점
+
+        // let cat ="cat";
+        // let dog ="dog";
+
+        // console.log(obj[cat]);
+        // console.log(obj[dog]);
+
+        // let obj ={
+        //     cat:"mcow",
+        //     dog:"woof",
+        //     animal:function(){
+        //         return `현재 동물은 ${this.cat}과 ${this.dog}이 있습니다.`;
+        //     }
+        // }
+
+        // console.log(obj.animel());
+
+        // let obj = {             
+        //     cat:"mcow",
+        //     dog:"woof"
+        // }
+
+        // //객체에 값 추가
+        // obj.cow ="moo";
+        // obj["pig"] = "oink";
+
+        // console.log(obj.cow);
+        // console.log(obj.pig);
+
+        // //객체에 값 삭제
+        // delete obj.cat;
+        // console.log(obj.cat);
+
+        //객체에 값 수정
+        // obj.cat = "abc";
+        // console.log(obj.cat);
+
+        //객체 데이터 조회
+        //for in
+        // for(let key in obj){
+        //     console.log(`key는 ${key}, value는 ${obj[key]} 입니다.`)
+        // }
+
+        //객체 생성 방식2
+        //new Object()
+
+        // let animal = new Object();
+        // animal.cat = "meow";
+        // animal.dog = "woof";
+        // animal.cow = "moo";
+
+        // console.log(animal.dog);
+
+        //객체 생성 방식3
+        //객체 생성자 함수
+        //생성을 해서 사용해야 한다.
+
+        // function Animal(name,sound){
+        //     this.name=name;
+        //     this.sound=sound;
+
+        //     this.animal =function(){
+        //         return `현재 동물은 ${this.name}과 ${this.sound}이 있습니다.`;
+        //     }
+        // }
+
+        // let cat = new Animal("cat","meow");
+        // let dog = new Animal("dog","woof");
+
+        // console.log(cat.animal());
+        // console.log(dog.animal());
+
+
+        function CheckWeight(name, height, weight) {
+		this.userName = name;
+		this.userHeight = height;
+		this.userWeight = weight;
+		this.minWeight;
+		this.maxWeight;
+
+		this.getInfo = function() {
+			var str = ""
+				str += "이름: " + this.userName + ", ";
+				str += "키: " + this.userHeight + ", ";
+				str += "몸무게: " + this.userWeight + "<br>";
+				return  str;
+		}
+		this.getResult = function( ) {
+			this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+			this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+			if(this.userWeight >= this.minWeight && 
+			this.userWeight <= this.maxWeight) {
+				return "정상 몸무게입니다";
+			} else if(this.userWeight < this.minWeight) {
+				return "정상 몸무게보다 미달입니다";
+			} else {
+				return "정상 몸무게보다 초과입니다";
+			}
+		}
+	}
+
+	var jang = new CheckWeight("장보리", 168, 62);
+	var park = new CheckWeight("박달재", 180, 88);
+	console.log(jang);
+	console.log(park);
+
+	document.write(jang.getInfo());
+	document.write(jang.getResult());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

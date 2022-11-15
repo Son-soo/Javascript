@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        // // $(document).ready(function(){
+        $(function(){    
+            // $("#txt").css("color","red"); //document.getElementById("txt");
+            // $(".tit").css("color","blue");
+            // $("h2").css("color","green");
+            // $("h1,h2").css("font-size","50px");
+            // $("h3.tit").css("border","1px solid black");
+            // $("h1").next().css("color","red");
+            // $("h1").parent().css("border","1px solid red");
+            // $("#inner_wrap h1").css("color","blue");
+            // $("#inner_wrap>p").css("color","pink");
+            // $("h1").prev().css("color","green");
+            // $("h1").prevAll().css({"color":"red","font-size":"40px"});
+            // $("h1").nextAll().css({"color":"green","font-size":"40px"});
+            $("h1").siblings().css({"color":"red","font-size":"40px"});
+        });
+    </script>
+</head>
+<body>
+
+   <div id="inner_wrap">
+    <p id="txt">JQuery Start</p>
+    <p class="tit">Class selector</p>
+    <h1>그룹 선택자</h1>
+    <h2>요소 선택자</h2>
+    <h3 class="tit">종속 선택자</h3>
+   </div>
+    <!-- <script>
+        $("#txt").css("color","red");
+    </script> -->
+    
+  
+</body>
+</html>

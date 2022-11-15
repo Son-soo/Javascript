@@ -80,20 +80,50 @@
         // sum(10,20,30,40,50);
 
 
-        function testAvg(arrData){
-		var sum = 0;    
-		for(var i = 0; i < arrData.length; i++) {
-			sum += Number(prompt(arrData[i] + " 점수는?", "0"));
-		}
+        
+        // let sum1 = 0;
+        // function sum(...number){
+            //     for(let i=0; i<number.length; i ++){
+                //         sum1 += number[i];
+                //     }
+                //     document.write(sum1);       
+                // }    
+                
+                // sum(10,20,30);
+                
+        // function testAvg(arrData){
+        // var sum = 0;    
+        // for(var i = 0; i < arrData.length; i++) {
+        // 	sum += Number(prompt(arrData[i] + " 점수는?", "0"));
+        // }
+        
+        // var avg = sum / arrData.length;
+        // return avg;
+        // }
+        
+        // var arrSubject = ["국어", "수학"];
+        // var result = testAvg(arrSubject);
+        
+        // document.write("평균 점수는 " + result + "점 입니다");
 
-		var avg = sum / arrData.length;
-		return avg;
-	    }
+        //즉시실행함수(자동호출함수)
+        (function(x){
+            console.log(x*x);
+        }(2));                  //마지막 괄호 안에 () 매개변수 영역 작성
 
-	    var arrSubject = ["국어", "수학"];
-    	var result = testAvg(arrSubject);
+        (mySquare = function(x){
+            console.log(x*x);
+        })(3);                  //마지막 괄호 밖에 () 매개변수 영역 작성
 
-	    document.write("평균 점수는 " + result + "점 입니다");
+        mySquare(4);
+
+        var mySquare = (function(x){
+            return x*x;
+        })(5);
+
+        console.log(mySquare);
+
+
     </script>
 </head>
 <body id="theBody">
